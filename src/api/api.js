@@ -19,7 +19,10 @@ const {
   updateRole,
   deleteRole,
 } = require("../services/role.service");
-const { createTransaction } = require("../services/transaction.service");
+const {
+  createTransaction,
+  getTransactions,
+} = require("../services/transaction.service");
 const {
   createUser,
   updateUser,
@@ -52,6 +55,7 @@ router.put("/admin/api/v1/update/booking", updateBooking);
 router.delete("/admin/api/v1/delete/booking", deleteBooking);
 
 router.post("/admin/api/v1/create/transaction", createTransaction);
+router.get("/admin/api/v1/get/transactions", getTransactions);
 
 module.exports = {
   router,
